@@ -119,7 +119,7 @@ export function createTransaction(){ //create single transaction....
 
 function getIDBkeys(keyvalues){
 
-    keyvalues=keyvalues.filter(el=>(el??false)===false?false:true).sort((a,b)=>a>b?1:-1);
+    keyvalues=keyvalues.filter((el,index)=>(el??false)===false?false:keyvalues.indexOf(el)===index).sort((a,b)=>a>b?1:-1);
 
     if(keyvalues.length===1)return [keyvalues,IDBKeyRange.only(keyvalues[0])];
 
