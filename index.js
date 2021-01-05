@@ -67,9 +67,6 @@ export default class SimpleStore{
         this[transactionPromise]=new Promise((res,rej)=>{
             this[resolve]=res;
             this[reject]=rej;
-        }).then((res)=>{
-            this[transactionPromise]=null;
-            return res;
         })
         return this;
     }
