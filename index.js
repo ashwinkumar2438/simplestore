@@ -197,5 +197,5 @@ Object.defineProperty(SimpleStore.prototype,instance,{
     enumerable:false
 })
 
-//window.SimpleStore=SimpleStore;
+window.SimpleStore=SimpleStore;
 
