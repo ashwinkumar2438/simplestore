@@ -1,4 +1,4 @@
-import {store,add,put,get,deleteVal,commit,getAll,clear} from "./operations.js"; // all operation methods.
+import {store,add,update,get,deleteVal,commit,getAll,clear} from "./operations.js"; // all operation methods.
 import {transactionPromise, //all symbol imports. 
         upgradeNeeded,
         checkStores,
@@ -182,7 +182,7 @@ SimpleStore.prototype.store=store;
 
 SimpleStore.prototype.add=add;
 SimpleStore.prototype.get=get;
-SimpleStore.prototype.put=put;
+SimpleStore.prototype.update=update;
 SimpleStore.prototype.delete=deleteVal;
 SimpleStore.prototype.getAll=getAll;
 SimpleStore.prototype.clear=clear;

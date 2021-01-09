@@ -36,7 +36,7 @@ data=Array.isArray(data)?data:[data];
 return addOperation.call(this,"add",data);
 }
 
-export function put(data){
+export function update(data){
     data=Array.isArray(data)?data:[data];
     data=data.map(set=>{
         if(set.data && set.index){
