@@ -3,14 +3,15 @@
 
 This project aims at making interaction with indexedDB as smooth as possible with least effort but at the same time maintaining the transactions efficient.
 <br/>
-## Installing / Getting started
----
-You can get started with the simple cdn for the library:
 
-https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.0/dist/simplestore.min.js
+## Installing / Getting started
+
+You can easily get started by adding the below [cdn](https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.0/dist/simplestore.min.js):
+
+https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.1/dist/simplestore.min.js
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.0/dist/simplestore.min.js"><script>
+<script src="https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.1/dist/simplestore.min.js"><script>
 <script>
 var mystore=new SimpleStore("mystore");
 </script>
@@ -52,7 +53,7 @@ mystore.addStores([{
 
 
 ### Methods:
-* [addStores](###)
+* [addStores](#addstores)
 * [add](#add)
 * [update](#update)
 * [get](#get)
@@ -66,12 +67,10 @@ mystore.addStores([{
 <br>
 
 ## Features
----
-<br/>
 
 ### Accessing an ObjectStore:   
 
-Before performing any operation, the store has to be opened in SimpleStore instance on which the operations have to be performed.
+Before performing any operation, the store has to be opened in `SimpleStore` instance on which the operations have to be performed.
 
 For example, to add a data to store `books` you can do it as shown below:
 
@@ -105,7 +104,8 @@ mystore.store("books")
         }); 
 
 ```
-The final result is segregated by store names if `get` methods are called.
+
+The response of `get` methods are segregated by store names.
 
 <br/>
 
@@ -152,17 +152,13 @@ To remove the tracking and close the db, you can simple call the close method:
 <br/>
 
 ## Methods
----
-<br/>
 
 ### addStores()
 
-<br/>
-
 **Arguments:**
 
->`Array` of `Objects`: <br/>
-Each `Object` has: 
+>`Array` of `Objects`:<br/> 
+>Each `Object` has: 
 
 |propertyname| Type | Required|
 |-----|------|----|
@@ -184,10 +180,10 @@ The `name` of the objectStore is mandatory.
 
 If the mentioned schema is already present, the version is not updated.
 
+<br/>
+
 
 ### add()
-
-<br/>
 
 **Arguments:**
 
@@ -196,6 +192,8 @@ If the mentioned schema is already present, the version is not updated.
  OR
 
 >`Array` of `Objects`
+
+<br/>
 
 This method can add a single record to the database or a list of records. 
 
@@ -210,8 +208,6 @@ Before calling `add` method, the store has to be opened in which the operation n
 
 ### update()
 
-<br/>
-
 **Arguments:**
 
 >`Object`  
@@ -222,8 +218,6 @@ Properties expected in `Object`:
 |-----|------|----|
 |data|`Object`|required
 |index|`String`|required|
-
-<br/>
  
  OR
 
@@ -248,8 +242,6 @@ Before calling `update` method, the store has to be opened in which the operatio
 
 ### get()
 
-<br/>
-
 **Arguments:**
 
 >`Object`  
@@ -263,6 +255,8 @@ Properties expected in `Object`:
  OR
 
 >`Array` of `Objects`
+
+<br/>
 
 The get method fetched record based on index. 
 The object passed should have the `indexname` based on which the search needs to be done with the value.
@@ -289,8 +283,6 @@ Before calling `get` method, the store has to be opened in which the operation n
 
 ### delete()
 
-<br/>
-
 **Arguments:**
 
 >`Object`  
@@ -305,6 +297,8 @@ Properties expected in `Object`:
 
 >`Array` of `Objects`
 
+<br/>
+
 The delete method deletes records based on index and works similar to `get` method. 
 
 `indexname` can be of uniqueindex or non-unique one.
@@ -317,8 +311,6 @@ Before calling `delete` method, the store has to be opened in which the operatio
 
 ### getAll()
 
-<br/>
-
 This method will fetch all the data in a store and the response structure will be similar as shown in the get method. 
 
 Any `get` method called on top of `getAll` will be ignored as `getAll` will be fetching all the data from the store.
@@ -328,8 +320,6 @@ Before calling `getAll` method, the store has to be opened in which the operatio
 <br/>
 
 ### clear()
-
-<br/>
 
 This method will delete all the data in a store. 
 
@@ -348,6 +338,8 @@ The transaction is auto-created once the macro-queue is cleared.
 If you want to create the transaction at any point, you can call the `commit` method.
 
 `commit` method will create the transaction and the internal queue is set to clear for the next iteration.
+
+<br/>
 
 ### close()
 
