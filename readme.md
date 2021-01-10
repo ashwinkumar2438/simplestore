@@ -352,7 +352,6 @@ The close method will close the db and remove the instance from further tracking
 <br/>
 
 ## Live Demo
----
 
 Here is a [live demo](https://jsfiddle.net/ashwin_kumar_coder/ftu6kyzm/) of SimpleStore in action.
 
