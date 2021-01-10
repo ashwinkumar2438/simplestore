@@ -6,7 +6,7 @@ This project aims at making interaction with indexedDB as smooth as possible wit
 
 ## Installing / Getting started
 
-You can easily get started by adding the below [cdn](https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.0/dist/simplestore.min.js):
+You can easily get started by adding the below [cdn](https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.1/dist/simplestore.min.js):
 
 https://cdn.jsdelivr.net/npm/simplestore-indexeddb@1.2.1/dist/simplestore.min.js
 
